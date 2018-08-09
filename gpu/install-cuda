@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+add-apt-repository ppa:graphics-drivers/ppa
+apt-get update
+apt-get install nvidia-396 -y
+dpkg -i cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+apt-get update
+apt-get install cuda -y
+dpkg -i libcudnn6_6.0.21-1+cuda8.0_amd64.deb
+dpkg -i libcudnn6-dev_6.0.21-1+cuda8.0_amd64.deb
+dpkg -i libcudnn5_5.1.10-1+cuda8.0_amd64.deb
+dpkg -i libcudnn5-dev_5.1.10-1+cuda8.0_amd64.deb 
+apt-get install openmpi-bin -y
